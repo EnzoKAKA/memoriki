@@ -68,4 +68,4 @@ When user requests health check:
 
 ## Language
 Write wiki content in the same language as the source material.
-Communicate with user in Russian.
+Communicate with user in their preferred language.
